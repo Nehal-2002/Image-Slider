@@ -20,7 +20,7 @@ img{
   width:100%;
 }
 
-button{
+.left-button,.right-button{
   position: absolute;
   height: 100%;
   background-color: black;
@@ -31,7 +31,8 @@ button{
   cursor: pointer;
 }
 
-button>span{
+.left-button>span,
+.right-button>span{
   opacity: 1;
   color:aliceblue;
 }
@@ -40,9 +41,42 @@ button>span{
   right: 0%;
 }
 
+.nav-button{
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .image-slider{
     width: 45%;
     left: 25%
+  }
+
+  .nav-button{
+    position:absolute;
+    width: 40%;
+    height: 20%;
+    left: 30%;
+    bottom: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .nav-button button{
+    height: 15%;
+    width: 5%;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  .nav-button button:hover{
+    background-color: black;
+  }
+
+  .active{
+    border: 2px solid;
+  }
+  .not-active{
+    border: 1px solid;
   }
 }

@@ -1,5 +1,6 @@
 import './App.css';
 import Images from './components/images'
+import NavBtn from './components/navbuttons'
 import { useState } from 'react';
 
 function decIdx(setIndex,idx){
@@ -24,6 +25,7 @@ function App() {
     <div className="image-slider">
       <button className="right-button" onClick={()=> decIdx(setIdx,imgIdx)}><span>&lt;</span></button>
       <Images imageIndex={imgIdx}/>
+      <NavBtn className="nav-button" changeIdx = {setIdx} imgId={imgIdx}/>
       <button className="left-button" onClick={()=> incIdx(setIdx,imgIdx)}><span>&gt;</span></button>
     </div>
   );
